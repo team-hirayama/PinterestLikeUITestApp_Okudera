@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photos View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PhotosViewController" customModule="PinterestLikeUITestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KoI-qg-4GA">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="d8H-Ta-YyG">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="MtA-1F-pBc" customClass="PhotoCollectionViewCell" customModule="PinterestLikeUITestApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e2w-8f-mvv">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="55"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYK-gt-WwX">
+                                                    <rect key="frame" x="8" y="55" width="84" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAn-rk-Pob">
+                                                    <rect key="frame" x="8" y="76" width="84" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.66666666669999997" green="0.64959354570000005" blue="0.63650660319999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="jYK-gt-WwX" firstAttribute="top" secondItem="e2w-8f-mvv" secondAttribute="bottom" id="4xq-OU-gn4"/>
+                                            <constraint firstItem="jYK-gt-WwX" firstAttribute="leading" secondItem="MtA-1F-pBc" secondAttribute="leadingMargin" id="6u4-kv-d8d"/>
+                                            <constraint firstAttribute="trailing" secondItem="e2w-8f-mvv" secondAttribute="trailing" id="Gfv-xO-KfW"/>
+                                            <constraint firstItem="aAn-rk-Pob" firstAttribute="leading" secondItem="MtA-1F-pBc" secondAttribute="leadingMargin" id="PzJ-1g-m6N"/>
+                                            <constraint firstItem="aAn-rk-Pob" firstAttribute="trailing" secondItem="MtA-1F-pBc" secondAttribute="trailingMargin" id="TNn-fU-ygw"/>
+                                            <constraint firstItem="e2w-8f-mvv" firstAttribute="leading" secondItem="MtA-1F-pBc" secondAttribute="leading" id="hCL-uZ-0gr"/>
+                                            <constraint firstItem="jYK-gt-WwX" firstAttribute="trailing" secondItem="MtA-1F-pBc" secondAttribute="trailingMargin" id="jyp-qG-pja"/>
+                                            <constraint firstItem="aAn-rk-Pob" firstAttribute="top" secondItem="jYK-gt-WwX" secondAttribute="bottom" id="kXO-Qz-1FW"/>
+                                            <constraint firstItem="e2w-8f-mvv" firstAttribute="top" secondItem="MtA-1F-pBc" secondAttribute="top" id="lBA-LT-KNn"/>
+                                            <constraint firstItem="aAn-rk-Pob" firstAttribute="bottom" secondItem="MtA-1F-pBc" secondAttribute="bottomMargin" id="pv9-2F-faj"/>
+                                        </constraints>
+                                        <size key="customSize" width="100" height="100"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="captionLabel" destination="jYK-gt-WwX" id="RlM-Ri-7cf"/>
+                                            <outlet property="commentLabel" destination="aAn-rk-Pob" id="Yzb-cK-uEC"/>
+                                            <outlet property="imageView" destination="e2w-8f-mvv" id="Cko-ez-BIY"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KoI-qg-4GA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="MHX-JB-76e"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KoI-qg-4GA" secondAttribute="bottom" id="YOu-K8-y1Q"/>
+                            <constraint firstAttribute="trailing" secondItem="KoI-qg-4GA" secondAttribute="trailing" id="cvx-pX-W6b"/>
+                            <constraint firstItem="KoI-qg-4GA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="p5k-PF-YWL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="KoI-qg-4GA" id="UXr-bV-WJ4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+    </scenes>
+</document>
